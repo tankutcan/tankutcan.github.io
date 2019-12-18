@@ -1,1 +1,1 @@
-# Tankut Can
+# just a personal website

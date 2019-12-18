@@ -4,4 +4,4 @@ gems:
   - jekyll-sitemap
 
 markdown: kramdown
-theme: minima #jekyll-theme-minimal
+theme: jekyll-theme-minimal

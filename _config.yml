@@ -2,4 +2,5 @@ name: TC in ML
 markdown: kramdown
 theme: jekyll-theme-minimal
 permalink: /blog/:year/:month/:day/:title
-gems: - jekyll-sitemap
+gems:
+  - jekyll-sitemap

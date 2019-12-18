@@ -1,6 +1,6 @@
 <html>
   <head>
-   <title> Tankut Can </title>
+   <title>Tankut Can</title>
    </head>
    <body>
    <h1> World? </h1>

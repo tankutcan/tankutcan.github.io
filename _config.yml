@@ -1,7 +1,16 @@
-name: TC in ML
+title: TC in ML
+url: https://tankutcan.github.io
+baseurl: ""
+
 permalink: /blog/:year/:month/:day/:title
-gems:
-  - jekyll-sitemap
 
 markdown: kramdown
-theme: minima #jekyll-theme-minimal
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

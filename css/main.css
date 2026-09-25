@@ -14,11 +14,24 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
+    color: #000000;
+    font-weight: bold
 }
 a:hover {
     text-decoration: underline;
 }
+
+/* External links — anything pointing off-site */
+a[href^="http"]:not([href*="tankutcan.github.io"]) {
+    color: #1772d0;;
+}
+
+/* Optional: a small arrow marking external links */
+a[href^="http"]:not([href*="tankutcan.github.io"])::after {
+    font-size: 0.75em;
+}
+
+
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -40,4 +53,274 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+/* Template placeholders — delete this rule (and the class="placeholder"
+   attributes in the HTML) once real content is in. */
+.placeholder {
+    color: #b23;
+    background: #fdf3f3;
+    border-left: 3px solid #e2a8a8;
+    padding: 4px 12px;
+    font-style: italic;
+}
+
+.plain {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Curriculum vitae */
+.cv {
+    color: #202124;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1rem;
+    line-height: 1.55;
+    margin: 0 auto;
+    max-width: 920px;
+}
+
+.cv-header {
+    align-items: flex-start;
+    border-bottom: 2px solid #202124;
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    padding: 42px 0 28px;
+}
+
+.cv-header h1 {
+    font-size: clamp(2.7rem, 8vw, 4.7rem);
+    letter-spacing: -0.045em;
+    line-height: .95;
+    margin: 0 0 18px;
+}
+
+.cv-kicker {
+    color: #5f6368;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+}
+
+.cv-affiliation,
+.cv-contact {
+    font-size: 1rem;
+    line-height: 1.45;
+    margin: 3px 0;
+}
+
+.cv-contact span {
+    color: #9aa0a6;
+    padding: 0 5px;
+}
+
+.cv-download {
+    border: 1px solid #202124;
+    border-radius: 2px;
+    color: #202124;
+    flex: none;
+    font-size: .85rem;
+    padding: 9px 13px;
+}
+
+.cv-contents {
+    border-bottom: 1px solid #dadce0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    padding: 16px 0;
+}
+
+.cv-contents a {
+    color: #5f6368;
+    font-size: .82rem;
+    font-weight: 600;
+}
+
+.cv section {
+    scroll-margin-top: 20px;
+}
+
+.cv h2 {
+    border-bottom: 1px solid #dadce0;
+    font-size: 1.55rem;
+    letter-spacing: -.02em;
+    margin: 54px 0 24px;
+    padding-bottom: 8px;
+}
+
+.cv h3 {
+    color: #3c4043;
+    font-size: 1.05rem;
+    margin: 28px 0 14px;
+}
+
+.cv p {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.cv li {
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+.cv-entry {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: 120px minmax(0, 1fr);
+    margin: 0 0 18px;
+}
+
+.cv-date {
+    color: #5f6368;
+    font-size: .86rem;
+    font-variant-numeric: tabular-nums;
+    padding-top: .14em;
+    white-space: nowrap;
+}
+
+.cv-detail {
+    color: #5f6368;
+    font-size: .93rem;
+}
+
+.cv-status,
+.cv-key {
+    color: #5f6368;
+    font-style: italic;
+}
+
+.cv-key {
+    font-size: .83rem !important;
+    margin-bottom: 24px;
+}
+
+.cv-accolade {
+    color: #0f6f6c;
+    font-weight: 700;
+}
+
+.cv-publications,
+.cv-long-list {
+    padding-left: 2.5rem;
+}
+
+.cv-publications li,
+.cv-long-list li {
+    margin-bottom: 17px;
+}
+
+.cv-more {
+    margin: 4px 0 28px;
+}
+
+.cv-more summary {
+    color: #1772d0;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 700;
+    margin-left: .2rem;
+    padding: 7px 0;
+    width: fit-content;
+}
+
+.cv-more summary:hover {
+    text-decoration: underline;
+}
+
+.cv-more summary:focus-visible {
+    outline: 2px solid #1772d0;
+    outline-offset: 4px;
+}
+
+.cv-more-open {
+    display: none;
+}
+
+.cv-more[open] > summary .cv-more-closed {
+    display: none;
+}
+
+.cv-more[open] > summary .cv-more-open {
+    display: inline;
+}
+
+.cv-more[open] > summary {
+    margin-bottom: 12px;
+}
+
+.cv-updated {
+    border-top: 1px solid #dadce0;
+    color: #777 !important;
+    font-size: .78rem !important;
+    margin-top: 55px;
+    padding-top: 12px;
+}
+
+@media (max-width: 700px) {
+    body {
+        margin: 30px auto;
+        width: 88%;
+    }
+
+    .cv-header {
+        display: block;
+        padding-top: 28px;
+    }
+
+    .cv-download {
+        display: inline-block;
+        margin-top: 18px;
+    }
+
+    .cv-entry {
+        gap: 5px;
+        grid-template-columns: 1fr;
+        margin-bottom: 24px;
+    }
+
+    .cv h2 {
+        margin-top: 42px;
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        width: 100%;
+    }
+
+    body > nav,
+    body > footer,
+    .cv-contents,
+    .cv-download,
+    .cv-updated {
+        display: none;
+    }
+
+    .cv-header {
+        padding-top: 0;
+    }
+
+    .cv h2 {
+        break-after: avoid;
+    }
+
+    .cv-entry,
+    .cv li {
+        break-inside: avoid;
+    }
+
+    .cv-more > summary {
+        display: none;
+    }
+
+    .cv-more:not([open]) > :not(summary) {
+        display: block !important;
+    }
 }
